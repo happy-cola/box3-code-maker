@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./mdui/css/mdui.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="./mdui/js/mdui.min.js"></script>
+    <script src="./jquery/jquery-1.10.2.min.js"></script>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <title>SQL-创建表格</title>
+</head>
+
+<body class="mdui-theme-primary-indigo" leftmargin=0 topmargin=0 oncontextmenu='return false' ondragstart='return false'
+    onselectstart='return false'>
+    <script type="text/javascript">
+        function loadScript(url, callback) {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = url;
+            if (script.readyState) {//IE 
+                script.onreadystatechange = function () {
+                    if (script.readyState == "loaded" || script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        eval(callback + '()');
+                    }
+                };
+            } else {
+                script.onload = function () {
+                    eval(callback + '()');
+                };
+            }
+            document.body.appendChild(script);
+        }
+    </script>
+    <div class="mdui-toolbar mdui-color-theme">
+        <span class="mdui-typo-title">Box3-CodeMaker</span>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="./index.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">arrow_back</i></a>
+    </div><br /><br />
+    <span>SQL-创建表格</span>
+    <div class="mdui-textfield mdui-textfield-floating-label">
+        <i class="mdui-icon material-icons"></i>
+        <label class="mdui-textfield-label">表格名称</label>
+        <textarea class="mdui-textfield-input" id="table_name"></textarea>
+    </div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value1" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value2" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value3" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value4" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value5" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value6" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value7" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value8" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value9" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value10" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value11" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value12" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value13" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value14" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value15" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value16" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value17" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value18" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value19" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+    <div class="mdui-textfield mdui-textfield-expandable mdui-float-left"><button
+            class="mdui-textfield-icon mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">zoom_in</i></button><input class="mdui-textfield-input" type="text"
+            placeholder="表里面的值" id="table_value20" /><button class="mdui-textfield-close mdui-btn mdui-btn-icon"><i
+                class="mdui-icon material-icons">close</i></button></div>
+
+    <textarea id="input">这是复制的幕后黑手（（（</textarea>
+    <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
+            style="width: 1000px; height: 60px; margin-top: 15px; margin-bottom: 15px;" onclick="loadScript('js/create.js', 'create');">复制代码</button>
+</body>
+
+</html>
