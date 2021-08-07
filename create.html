@@ -34,6 +34,24 @@
             }
             document.body.appendChild(script);
         }
+        function fake_click(obj) {
+            var ev = document.createEvent("MouseEvents");
+            ev.initMouseEvent(
+                "click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null
+            );
+            obj.dispatchEvent(ev);
+        }
+
+        function _download_(name, data) {
+            var urlObject = window.URL || window.webkitURL || window;
+
+            var downloadData = new Blob([data]);
+
+            var save_link = document.createElementNS("http://www.w3.org/1999/xhtml", "a")
+            save_link.href = urlObject.createObjectURL(downloadData);
+            save_link.download = name;
+            fake_click(save_link);
+        }
     </script>
     <div class="mdui-toolbar mdui-color-theme">
         <span class="mdui-typo-title">Box3-CodeMaker</span>
@@ -149,7 +167,8 @@
 
     <textarea id="input">这是复制的幕后黑手（（（</textarea>
     <button class="mdui-btn mdui-btn-block mdui-btn-raised mdui-ripple"
-            style="width: 1000px; height: 60px; margin-top: 15px; margin-bottom: 15px;" onclick="loadScript('js/create.js', 'create');">复制代码</button>
+        style="width: 1000px; height: 60px; margin-top: 15px;"
+        onclick="loadScript('js/create.js', 'create');_download_('data.txt', `var a = {name: '${$('#table_name').val()}',value1: '${$('#table_value1').val()}',value2: '${$('#table_value2').val()}',value3: '${$('#table_value3').val()}',value4: '${$('#table_value4').val()}',value5: '${$('#table_value5').val()}',value6: '${$('#table_value6').val()}',value7: '${$('#table_value7').val()}',value8: '${$('#table_value8').val()}',value9: '${$('#table_value9').val()}',value10: '${$('#table_value10').val()}',value11: '${$('#table_value11').val()}',value12: '${$('#table_value12').val()}',value13: '${$('#table_value13').val()}',value14: '${$('#table_value14').val()}',value15: '${$('#table_value15').val()}',value16: '${$('#table_value16').val()}',value17: '${$('#table_value17').val()}',value18: '${$('#table_value18').val()}',value19: '${$('#table_value19').val()}',value20: '${$('#table_value20').val()}'}`)">复制代码并导出数据</button>
 </body>
 
 </html>
