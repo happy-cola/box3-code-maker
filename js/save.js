@@ -32,6 +32,6 @@ for (var v of l) {
 list1 = list1.slice(0, -2);
 list2 = list2.slice(0, -2);
 list3 = list3.slice(0, -2);
-var code = 'async function saveData() {\n    if (entity.player.userKey) {        await db.sql`\n            INSERT INTO ' + names + '(\n' + list1 + '\n            )\n            VALUES(\n' + list2 + '\n            )\n            ON CONFLICT(userKey)\n            DO UPDATE SET\n' + list3 + '        `\n    }\n};\nworld.onPlayerJoin(async ({entity})=>{await saveData(entity);});';
+var code = 'async function saveData() {\n    if (entity.player.userKey) {        await db.sql`\n            INSERT INTO ' + names + '(\n' + list1 + '\n            )\n            VALUES(\n' + list2 + '\n            )\n            ON CONFLICT(userKey)\n            DO UPDATE SET\n' + list3 + '        `\n    }\n};\nworld.onPlayerLeave(async ({entity})=>{await saveData(entity);});';
 console.log(code);
 copyText(code);
