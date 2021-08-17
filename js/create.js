@@ -1,9 +1,9 @@
 const names = $('#table_name').val();
 var l = [];
 var sqllist = '';
-
-for (var i = 1; i < 21; i++) {
-    l.push($(`#table_value${i}`).val());
+var nodes=document.getElementsByClassName("value");
+for (var i = 0; i < nodes.length; i++) {
+    l.push(nodes[i].value);
 }
 
 function copyText(text) {
@@ -16,7 +16,7 @@ function copyText(text) {
 
 for (var v of l) {
     var vs = v.split(' ');
-    var c = '';
+    var c = 'TEXT';
     if (vs == '') { continue; }
     if (vs[1] == '整数') {
         c = 'INTEGER';
@@ -30,7 +30,7 @@ for (var v of l) {
         c = 'NUMERIC';
     } else if (vs[1] == 'userKey') {
         c = 'TEXT PRIMARY KEY UNIQUE';
-    }
+    }else c=vs[1];
     sqllist += '            ' + vs[0] + ' ' + c + ' ' + 'NOT NULL,\n';
 }
 
