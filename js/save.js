@@ -1,4 +1,4 @@
-const names = $('#name').val();
+var names = $('#name').val();
 var l = [];
 var list1 = '';
 var list2 = '';
