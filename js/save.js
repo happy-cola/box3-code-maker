@@ -1,4 +1,4 @@
-const names = $('#name').val();
+var names = $('#name').val();
 var l = [];
 var list1 = '';
 var list2 = '';
@@ -18,7 +18,7 @@ function copyText(text) {
 
 for (var v of l) {
     var vs = v.split(' ');
-    if (v == '' || v == ' ') {
+    if (v == '' || v == ' ' || v == 'undefined') {
         continue;
     }
     if (vs[1] == '玩家名') {
