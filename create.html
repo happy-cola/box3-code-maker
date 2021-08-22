@@ -74,6 +74,7 @@
 		<center><button class="mdui-textfield-icon mdui-btn mdui-color-light-blue mdui-ripple" style="border-radius:7px;" onclick="addField();">
 				<i class="mdui-icon material-icons">add</i>点击此处添加
 			</button></center>
+
 		<script type="text/javascript">
 			function destroyField(c) {
 				var d = document.getElementById('vdiv' + c);
@@ -91,7 +92,7 @@
 				fieldArea.innerHTML +=
 					`<div class="mdui-textfield mdui-textfield-expandable" id="vdiv${count}">
 					<button class="mdui-textfield-icon mdui-btn mdui-btn-icon mdui-hidden" id="openbtn${count}"></button>
-					<input class="mdui-textfield-input value" type="text" id="value${count}" placeholder="表里面的值">
+					<input class="mdui-textfield-input value" type="text" id="table_value${count}" placeholder="表里面的值">
 					<button class="mdui-textfield-close mdui-btn mdui-btn-icon" onclick="destroyField(${count})"><i class="mdui-icon material-icons">close</i></button>				
 				</div>
 				`;
