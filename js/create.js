@@ -1,4 +1,4 @@
-const names = $('#table_name').val();
+var names = $('#table_name').val();
 var l = [];
 var sqllist = '';
 var nodes=document.getElementsByClassName("value");
