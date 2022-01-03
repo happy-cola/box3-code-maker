@@ -11,7 +11,7 @@ a {
     position: relative;
 }
 
-#input, #save_input {
+#input, #save_input, #load_input {
     position: absolute;
     top: 0;
     left: 0;
